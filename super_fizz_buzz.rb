@@ -1,6 +1,5 @@
-numbers = (0..1000).to_a 
-
-numbers.each do |num|
+# numbers = 1000.times
+1000.times.each do |num|
 
 	if num % 3 == 0 && num % 5 == 0 && num % 7 == 0 
 		puts "SuperFizzBuzz"
@@ -20,3 +19,16 @@ numbers.each do |num|
 		puts num
 	end
 end
+
+# alternate:
+1000.times do |i| 
+  fizz = (i % 3 == 0)
+  buzz = (i % 5 == 0)
+  puts case
+       when fizz && buzz then 'FizzBuzz'
+       when fizz then 'Fizz'
+       when buzz then 'Buzz'
+       else i
+       end
+     end
+ 

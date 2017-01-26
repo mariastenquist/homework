@@ -19,15 +19,18 @@
 		puts num
 	end
 end
-
+# Prime.1000.times 
 # alternate:
 1000.times do |i| 
   fizz = (i % 3 == 0)
   buzz = (i % 5 == 0)
+  supr = (i % 7 == 0)
   puts case
-       when fizz && buzz then 'FizzBuzz'
-       when fizz then 'Fizz'
+  		 when supr then 'Super'
+  		 when fizz then 'Fizz'
        when buzz then 'Buzz'
+       when fizz && buzz then 'FizzBuzz'
+  		 when supr && fizz && buzz then 'SuperFizzBuzz'
        else i
        end
      end
